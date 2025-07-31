@@ -1,6 +1,11 @@
+//mayank22 hotel
+//mongodb+srv://hotel:<db_password>@cluster0.sgd1jfq.mongodb.net/
+
+require('dotenv').config();
 const mongoose = require('mongoose');
 
-const mongoURL = 'mongodb://127.0.0.1:27017/hotel';
+//const mongoURL = 'mongodb://127.0.0.1:27017/hotel';
+const mongoURL = process.env.MONGO_URL;
 
 mongoose.connect(mongoURL);
 
